@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	var timer = false;
 	var mouseDown = false;
 
+	var numEtape = 0;
+
 	var canvasRedimensionner = function() {
 		canvas.width = screen.width;
 		canvas.height = screen.height;
@@ -41,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	};
 
 	var avancerEtat = function() {
+		numEtape++;
+
+		document.getElementById('numEtape').innerHTML = numEtape;
+
 		nouvelleGeneration = [];
 
 		cellules.forEach(function(valeur1, x) {
@@ -98,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	var effacer = function() {
 		cellules = [];
 		contexte.clearRect(0, 0, canvas.width, canvas.height);
+		numEtape = 0;
 	};
 
 	var aleatoire = function(min, max) {
