@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+
+	<title>Jeu de la vie JS</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+	<header>
+		<form action="#" method="post">
+			Taille cellule : <input type="number" id="taille" style="width:60px;" min="1" max="50" value="10" placeholder=""/>
+			FPS : <input type="number" id="fps" style="width:60px;" min="1" max="60" value="20" placeholder=""/>
+			<input type="button" id="tuer" value="Tuer"/>
+			<input type="button" id="demarrer" value="Démarrer"/>
+			<input type="button" id="arreter" value="Arrêter"/>
+			<input type="button" id="aleatoire" value="Aléatoire"/>
+			<span id="posX">0</span>;<span id="posY">0</span>
+		</form>
+	</header>
+
+	<canvas id="canvas"></canvas>
+
+</body>
+</html>
