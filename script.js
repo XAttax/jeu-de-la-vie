@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	};
 
 	var demarrer = function() {
+		clearInterval(timer);
 		timer = setInterval(avancerEtat, 1000/fps);
 	};
 
@@ -118,6 +119,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 			return false;
 
 		mouseDown = true;
+
+		caseX = Math.floor(e.layerX/taille);
+		caseY = Math.floor(e.layerY/taille);
+
+		creerCellule(cellules, caseX, caseY);
 	}, false);
 
 	window.addEventListener('mouseup', function(e) {
